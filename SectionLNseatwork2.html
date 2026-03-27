@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="author" content="Charles Oswin A. Dela Cruz" />
+  <meta name="revised" content="March 28, 2026" />
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      height: 1500px; /* added to allow scrolling */
+    }
+
+    .header, .footer {
+      background: lightblue;
+      padding: 10px;
+    }
+
+    .footer {
+      opacity: 0.5;
+      position: fixed;   /* Step 2 */
+      bottom: 0;
+      width: 100%;
+    }
+
+    .sidebar {
+      background: lightgreen;
+      width: 150px;
+      height: 200px;
+      position: relative; /* Step 1 */
+      top: 20px;
+      left: 20px;
+    }
+
+    .content {
+      background: lightyellow;
+      width: 300px;
+      height: 200px;
+      position: relative; /* changed for challenge */
+      top: 66px;          /* Step 3 */
+      left: 200px;
+      z-index: 1;         /* Step 4 */
+    }
+
+    .notice {
+      position: absolute; /* Step 4 + Challenge */
+      top: 0;
+      right: 0;
+      background: orange;
+      padding: 10px;
+      z-index: 2;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">Header</div>
+
+  <div class="sidebar">Sidebar</div>
+
+  <div class="content">
+    Main Content
+    <div class="notice">Notice!</div>
+  </div>
+
+  <div class="footer">Footer</div>
+
+</body>
+</html>
