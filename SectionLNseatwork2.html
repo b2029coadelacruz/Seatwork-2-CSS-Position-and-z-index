@@ -4,46 +4,47 @@
   <meta name="author" content="Charles Oswin A. Dela Cruz" />
   <meta name="revised" content="March 28, 2026" />
   <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      height: 1500px; /* added to allow scrolling */
-    }
+    body { font-family: Arial, sans-serif; }
 
     .header, .footer {
       background: lightblue;
       padding: 10px;
     }
 
+    /* Step 2 (Fixed) */
     .footer {
       opacity: 0.5;
-      position: fixed;   /* Step 2 */
+      position: fixed;
       bottom: 0;
       width: 100%;
     }
 
+    /* Step 1 (Relative) */
     .sidebar {
       background: lightgreen;
       width: 150px;
       height: 200px;
-      position: relative; /* Step 1 */
+      position: relative;
       top: 20px;
       left: 20px;
     }
 
+    /* Step 3 (Absolute) + Step 4 (z-index) */
     .content {
       background: lightyellow;
       width: 300px;
       height: 200px;
-      position: relative; /* changed for challenge */
-      top: 66px;          /* Step 3 */
+      position: absolute;
+      top: 66px;
       left: 200px;
-      z-index: 1;         /* Step 4 */
+      z-index: 1;
     }
 
+    /* Step 4 (Absolute + z-index layering) */
     .notice {
-      position: absolute; /* Step 4 + Challenge */
-      top: 0;
-      right: 0;
+      position: absolute;
+      top: 60px;
+      left: 400px;
       background: orange;
       padding: 10px;
       z-index: 2;
@@ -55,14 +56,24 @@
 
   <div class="header">Header</div>
 
-  <div class="sidebar">Sidebar</div>
+  <div class="sidebar">
+    Sidebar
+    <!-- Step 1 applied: moved using relative positioning -->
+  </div>
 
   <div class="content">
     Main Content
-    <div class="notice">Notice!</div>
+    <!-- Step 3 applied: absolute positioning -->
+    <!-- Step 4: z-index set to 1 -->
   </div>
 
-  <div class="footer">Footer</div>
+  <!-- Step 4 element added -->
+  <div class="notice">Notice!</div>
+
+  <div class="footer">
+    Footer
+    <!-- Step 2 applied: fixed at bottom -->
+  </div>
 
 </body>
 </html>
