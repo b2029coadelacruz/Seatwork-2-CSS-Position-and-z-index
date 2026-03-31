@@ -95,11 +95,22 @@ It has a higher z-index (2) than the content (1). If you swap them, the content 
 To make .notice stay at the top-right of .content, you need to make .content the positioned parent then position .notice absolutely inside it
 3. Please answer the following reflection questions (15 minutes)
 
-    a. Could you summarize the differences between the CSS position values (static, relative, absolute, fixed)? 
+
+    a. Could you summarize the differences between the CSS position values (static, relative, absolute, fixed)?
+  
 The different CSS position values each control how elements are placed on a webpage. Static positioning is the default, where elements follow the normal document flow and cannot be adjusted using top, left, right, or bottom. Relative positioning allows an element to be moved from its original position while still keeping its space in the layout. Absolute positioning removes the element from the normal flow and places it based on its nearest positioned parent. Fixed positioning attaches the element to the viewport, meaning it stays in the same place on the screen even when the user scrolls.
+
+
     b. How does absolute positioning depend on its parent element?
+    
 Absolute positioning depends on its parent element because it uses the nearest ancestor with a non static position, such as relative, absolute, or fixed, as its reference point. If no such parent exists, the element will instead be positioned relative to the entire page. This is why setting a parent element’s position is important when using absolute positioning, as it controls where the child element will appear.
+
+
     c. How do you differentiate sticky from fixed (you can research on sticky)?
+    
 Sticky positioning differs from fixed positioning because it combines both relative and fixed behavior. A sticky element initially behaves like a relatively positioned element and scrolls along with the page. However, once it reaches a specified position, such as the top of the screen, it becomes fixed and stays in place. In contrast, a fixed element remains in the same position on the screen at all times, regardless of scrolling.
+
+
     d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.
+    
 If I were designing a webpage for a school event, I would use positioning to highlight important information effectively. For example, I could use fixed positioning for a navigation bar or a “Register Now” button so that it remains visible while scrolling. I could use absolute positioning to place labels or announcements on top of images, such as highlighting guest speakers or event schedules. Relative positioning could help adjust elements slightly for better alignment without affecting the layout, while z-index could ensure that important notices or pop-ups appear above other content, making the page more organized and visually clear.
